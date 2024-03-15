@@ -1,9 +1,8 @@
 /***
  *  curl https://api.baichuan-ai.com/v1/files \
-  -H "Authorization: Bearer sk-2980cf76eb06e554d79d49a9ecdd38fc"
+  -H "Authorization: Bearer $API_KEY"
  */
-const API_KEY = "sk-2980cf76eb06e554d79d49a9ecdd38fc";
-const API_URL = "https://api.baichuan-ai.com/v1";
+const API_KEY = "";
 const https = require('https');    
 const options = {  
   hostname: 'api.baichuan-ai.com',  
@@ -13,7 +12,7 @@ const options = {
   headers: {  
     'Authorization': `Bearer ${API_KEY}`  
   }  
-};  
+};
   
 const req = https.request(options, (res) => {  
   let data = '';  
